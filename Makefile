@@ -9,11 +9,11 @@ name := $(shell grep "^\#" resume.md | head -1 | sed -e 's/^\#[[:space:]]*//' | 
 
 resume.html: preamble.html resume.md postamble.html
 	cat preamble.html | sed -e 's/___NAME___/$(name)/' > $@
-	python -m markdown -x smarty resume.md >> $@
+	python3 -m markdown -x smarty resume.md >> $@
 	cat postamble.html >> $@
 
 resume.pdf: resume.html resume.css
-	weasyprint resume.html resume.pdf
+	python3 -m weasyprint resume.html resume.pdf
 
 clean:
 	rm -f resume.html resume.pdf

@@ -15,8 +15,8 @@ style it with [CSS](resume.css), output to [HTML](resume.html) and
 
  2. Install the dependencies:
     <pre>
-    pip install <a href="https://python-markdown.github.io/">markdown</a> <a href="https://weasyprint.org/">weasyprint</a>
-    </pre>
+    pip3 install <a href="https://python-markdown.github.io/">markdown</a> <a href="https://weasyprint.org/">weasyprint</a>
+    </pre> and `brew install python3 cairo pango gdk-pixbuf libffi` (dependencies of weasyprint)
 
  3. Edit [resume.md](resume.md) (the placeholder text is taken with thanks from the 
     [JSON Resume Project](https://jsonresume.org/themes/))
